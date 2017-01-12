@@ -1,0 +1,23 @@
+{
+  "name": "plaid-challenge",
+  "version": "1.0.0",
+  "description": "Plaid Challenge",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run prod:buildserver; node ./server-dist/app.js",
+    "prod:buildserver": "babel ./server -d ./server-dist --presets es2015,stage-2 --copy-files",
+    "dev:start": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julius Buckley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0"
+  }
+}
