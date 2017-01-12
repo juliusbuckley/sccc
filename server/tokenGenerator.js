@@ -1,4 +1,6 @@
-export default tokenGenerator = n => {
+import fs from 'fs';
+
+const tokenGenerator = n => {
   fs.writeFile('tokenList.txt', '', err => {
     if (err) {
       throw err;
@@ -14,3 +16,5 @@ export default tokenGenerator = n => {
     }
   });
 };
+
+export default tokenGenerator;
