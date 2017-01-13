@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "importing data from seed-clients.json..."
+mongoimport -d platform-interview -c clients -h jbuckley-interview.plaid.com  < seed-clients.json
+wait
+echo "seed-clients.json imported to mongodb!"
+echo "importing data from seed-items.json..."
+mongoimport -d platform-interview -c items -h jbuckley-interview.plaid.com  < seed-items.json
+echo "seed-items.json imported to mongodb!"
