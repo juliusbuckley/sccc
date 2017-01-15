@@ -1,2 +1,2 @@
 #!/bin/bash
-node ./server-dist/utils/createTokenList.js
+node ./server-dist/utils/createTokenList.js &
